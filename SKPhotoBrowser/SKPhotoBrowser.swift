@@ -353,6 +353,7 @@ public extension SKPhotoBrowser {
     func addPhotos(photos: [SKPhotoProtocol]) {
         self.photos.append(contentsOf: photos)
         self.reloadData()
+        paginationView.update(currentPageIndex)
     }
     
     func insertPhotos(photos: [SKPhotoProtocol], at index: Int) {
